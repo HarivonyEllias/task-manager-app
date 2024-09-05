@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Tâches</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+</head>
+<body>
+    <nav>
+        <h1>Gestion des Tâches</h1>
+        <button id="addTaskBtn">Ajouter une Tâche</button>
+    </nav>
+
+    <section>
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <th>Tâche</th>
+                    <th>Date limite</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="taskList">
+            </tbody>
+        </table>
+    </section>
+
+    <div id="taskFormContainer" class="hidden">
+        <form id="taskForm">
+            <label for="taskName">Nom de la tâche</label>
+            <input type="text" id="taskName" required>
+
+            <label for="taskDate">Date limite</label>
+            <input type="date" id="taskDate" required>
+
+            <button type="submit" id="submitTask">Enregistrer</button>
+            <button type="button" id="cancelTask">Annuler</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/animate.js') }}"></script>
+
+</body>
+</html>
